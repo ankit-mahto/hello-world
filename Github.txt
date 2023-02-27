@@ -1,0 +1,56 @@
+git init - for creating repo
+git status - for checking the working repo status
+!status four types - untracked , unmodified , modified , staging
+git add index.html - to add to staging area
+git add -A - to add all untracked files to staging area
+git commit -m "Inital Commit" - to add commit to main branch
+
+####if by chance any file is modified unknowingly then to match the file with its last commit
+git checkout index.html  - to match my working directory to last commit
+git checkout -f    	- to match all files to last commit
+
+git log - 		gives all info of all commits
+git log -p -5 - 	gives all 5 last commits and also detailed info of all changes
+
+git diff  	- compares working directory with staging area
+git diff --staged 	- compares staged area with last commit
+
+git commit -a -m  	- to commit all files skipping staging , but you have to track it first by----  git add -a
+
+###removing files
+git rm --cached waste.html  	- to add it to untracked files from staging area
+git rm waste.html  	- to remove it from working directory
+git status -s  	- M(green-staging area) , M(red - working dir)
+
+####using gitignore
+touch .gitignore  	- run from terminal, files in this file are ignored even if they are not in same working directory
+
+/mylogs.log 	- include in gitignore and ignores only the file name in working directory(folder ke andar ghus ke ignore mat karna)
+*.log 	- git will ignore all files with .log extension
+waste/ 	- include in gitignore and it will ignore waste folder 
+
+#####handling branches
+git branch feature1 -	to add branch named feature1
+git branch 		- lists all branches (current branch in green)
+git checkout feature1  	 - to switch to feature1
+git merge feature1  	- to merge feature1 to master
+git checkout -b -flask  	- create and switch to branch flask
+
+
+####remote repository
+git remote add origin https://_url_ -  to add remote repo
+git remote -   	lists all remote repo
+git remote -v 	- gives url of all rmeote repo
+git push origin master-		pushes master branch to remote repo
+git remote set-url origin - 	 _ssh-url-from-github_
+
+###gitpush
+git push -u origin master-	pushes master branch
+git push -u origin flask- 	pushes flask branch
+git push -        will push in the branch previously pushed with using -u, flask in this case
+git clone _repo-url_  harry  -		clones repo in harry namak folder
+
+
+
+
+
